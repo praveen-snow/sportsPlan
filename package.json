@@ -17,6 +17,9 @@
     "deploy": "npm run compile",
     "dist": "node ./bin/dist-server.js"
   },
+  "engines": {
+    "node": "5.3.0"
+  },
   "license": "MIT",
   "dependencies": {
     "babel-plugin-macros": "1.0.15",
