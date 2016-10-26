@@ -1,1 +1,1 @@
-web: node --harmony ./bin/webpack-dev-server
+web: node ./bin/webpack-dev-server.js
