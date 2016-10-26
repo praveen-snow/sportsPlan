@@ -1,0 +1,13 @@
+{
+  "presets": [
+  "es2015", 
+  "react",
+  "stage-0"
+  ],
+  "plugins":["macros","transform-runtime","add-module-exports"],
+  "env":{
+  	"production":{
+  	"plugins":["transform-react-constant-elements"]
+  	}
+  }
+}

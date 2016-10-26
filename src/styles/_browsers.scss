@@ -1,0 +1,17 @@
+@mixin onlyWebkit {
+	@media screen and (-webkit-min-device-pixel-ratio:0) {
+		@content;
+	}
+}
+
+@mixin onlyEdge {
+	@supports (-ms-accelerator:true) {
+		@content;
+	}
+}
+
+@mixin onlyGecko {
+	@-moz-document url-prefix() {
+		@content;
+	}
+}

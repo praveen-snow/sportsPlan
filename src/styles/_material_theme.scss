@@ -1,0 +1,46 @@
+@import "_colors";
+
+$fontface: $fontface;
+
+$theme_header_background_color: $PR_red;
+$theme_header_color: $PR_wht;
+
+$theme_title_small_letter_spacing: 1px;
+$theme_title_medium_letter_spacing: 3px;
+$theme_title_large_letter_spacing: 5px;
+
+$theme_card_opacity: 1.0;
+$theme_card_header_color: $PR_red;
+$theme_card_body_color: $PR_grey_dark;
+$theme_card_background_color: $PR_grayblue;
+
+$theme_card_button_color: $PR_red;
+$theme_card_button_background_color: $PR_wht;
+
+$theme_list_header_background_color: $PR_blue;
+$theme_list_header_border_bottom_color: $PR_red;
+$theme_list_header_border: 2px solid $PR_blue;
+$theme_list_footer_border: 5px solid $PR_blue;
+$theme_list_selected_background_color: $PR_teal;
+$theme_list_selected_color: $PR_blk;
+$theme_list_background_color: $PR_grey_dark;
+
+$theme_product_card_background_color: $PR_salmon;
+$theme_product_card_border_color: $PR_wht;
+$theme_product_card_header_background_color: $PR_red;
+$theme_product_card_header_background: none;
+$theme_product_card_header_color: $PR_wht;
+
+$theme_standard_card_opacity: 1.0;
+$theme_standard_card_header_opacity: 1.0;
+$theme_standard_card_body_opacity: 1.0;
+$theme_standard_card_background_color: $f6f6f6;
+$theme_standard_card_border_bottom: 1px solid #333;
+$theme_standard_card_alt_background_color: $eeeeee;
+$theme_standard_card_alt_border_bottom: 1px solid #666;
+
+// PAGES
+$theme_landing_accent_color: $PR_gold;
+$theme_pcc_accent_color: $PR_teal;
+$theme_product_desc_accent_color: $PR_salmon;
+$theme_uss_accent_color: $PR_sky;

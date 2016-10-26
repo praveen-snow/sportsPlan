@@ -1,0 +1,53 @@
+@import "_colors";
+
+$fontface: 'Open Sans', sans-serif;
+
+$theme_header_background_color: #effafa;
+$theme_header_color: $PR_blk;
+$theme_header_color_alt: #4a647f;
+
+$theme_input_color: $PR_grey_entry;
+$theme_table_header: $PR_darkred_alt;
+$theme_accordian_unselected_background: rgb(74, 101, 128);
+
+$theme_title_small_letter_spacing: 0px;
+$theme_title_medium_letter_spacing: 0px;
+$theme_title_large_letter_spacing: 0px;
+
+$theme_card_opacity: 0.9;
+$theme_card_header_color: $PR_red;
+$theme_card_body_color: $PR_grey_dark;
+$theme_card_background_color: $PR_grayblue;
+
+$theme_card_button_color: $PR_red;
+$theme_card_button_background_color: rgba($PR_wht, 0.5);
+
+$theme_list_header_background_color: $PR_offwhite;
+$theme_list_header_border_bottom_color: $PR_red;
+//$theme_list_header_border: 2px solid rgba(darken($PR_red, 20%), 0.6);
+//$theme_list_footer_border: 5px solid rgba(darken($PR_red, 20%), 0.7);
+$theme_list_header_border: 0px;
+$theme_list_footer_border: 0px;
+$theme_list_selected_background_color: $PR_red;
+$theme_list_selected_color: $PR_wht;
+$theme_list_background_color: $PR_grey_dark;
+
+$theme_product_card_background_color: $PR_blue;
+$theme_product_card_border_color: $PR_wht;
+$theme_product_card_header_background_color: $PR_red;
+$theme_product_card_header_background: linear-gradient(to bottom,#ed171b 0,rgba(224,39,48,.86) 36%,rgba(217,38,47,.8) 51%,rgba(211,38,46,.83) 62%,rgba(171,33,40,.95) 100%);
+$theme_product_card_header_color: $PR_wht;
+
+$theme_standard_card_opacity: 0.9;
+$theme_standard_card_header_opacity: 1.0;
+$theme_standard_card_body_opacity: 1.0;
+$theme_standard_card_background_color: rgba(0,0,0,0);
+$theme_standard_card_border_bottom: 1px solid $PR_wht;
+$theme_standard_card_alt_background_color: rgba(0,0,0,0);
+$theme_standard_card_alt_border_bottom: 1px solid $PR_wht;
+
+// PAGES
+$theme_landing_accent_color: rgba(0,0,0,0);
+$theme_pcc_accent_color: rgba(0,0,0,0);
+$theme_product_desc_accent_color: rgba(0,0,0,0);
+$theme_uss_accent_color: rgba(0,0,0,0);

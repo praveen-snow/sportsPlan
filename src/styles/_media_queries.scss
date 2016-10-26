@@ -1,0 +1,27 @@
+$medium: '(max-width: 900px), (min-device-pixel-ratio: 2) and (max-width: 1024px)';
+$small: '(max-width: 500px), (min-device-pixel-ratio: 2) and (max-width: 767px)';
+$smallPortrait: 'only screen and (min-device-width: 320px) and (max-device-width: 767px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)';
+$smallLandscape: 'only screen and (min-device-width: 320px) and (max-device-width: 767px)  and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape)';
+
+@mixin respond($point) {
+	@if $point == medium {
+		@media #{$medium} {
+			@content;
+		}
+	}
+	@else if $point == small {
+		@media #{$small} {
+			@content;
+		}
+	}
+	@else if $point == smallPortrait {
+		@media #{$smallPortrait} {
+			@content;
+		}
+	}
+	@else if $point == smallLandscape {
+		@media #{$smallLandscape} {
+			@content;
+		}
+	}
+}

@@ -1,0 +1,85 @@
+@import "../../styles/_common";
+
+::-webkit-input-placeholder {
+	color: #aaa !important;
+}
+
+::-moz-placeholder {
+   color: #aaa !important;
+   opacity: 1;
+}
+
+:placeholder-shown {
+	color: #aaa !important;
+	opacity: 1;
+}
+
+::-webkit-scrollbar {
+	height: 12px;
+	width: 12px;
+}
+
+::-webkit-scrollbar-track {
+	background: rgba(0,0,0,.1);
+	box-shadow: inset 0 0 3px rgba(0,0,0,0.1);
+}
+
+::-webkit-scrollbar-thumb {
+	background: rgba(0,0,0,.2); //rgba(195,22,30,.95);
+	border: 1px solid rgba(255,255,255,.7);
+	border-radius: 10px;
+}
+
+.appBackground {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+		background-image: url('../../assets/amFootball.jpg');
+		background-size: 100% 100%;
+		background-repeat: no-repeat;
+    z-index: -10;
+		.navBar{
+			height: 6vh;
+			background-color: #fff;
+			z-index: 10;
+			position: relative;
+			.SvgIcon{
+				margin-top: 5px;
+				width: '2.4em';
+			}
+		}
+		.sideNav{
+			width: 15vw;
+			background: #fff;
+			height: 100vh;
+			z-index: 10;
+			display: none;
+	    position: fixed;
+	    top: 0;
+	    left: 0;
+	    overflow-x: hidden;
+	    padding-top: 60px;
+			 a {
+			    padding: 8px 8px 8px 32px;
+			    text-decoration: none;
+			    font-size: 25px;
+			    color: #818181;
+			    display: block;
+			    transition: 0.3s
+			}
+			.closebtn {
+				position: absolute;
+				top: 0;
+				right: 0px;
+				font-size: 36px;
+			}
+		}
+		.playGroundDiv{
+			width: 100vw;
+	    height: 100vh;
+	    bottom: 0;
+	    right: 0;
+			z-index: 2;
+	    position: absolute;
+		}
+}
