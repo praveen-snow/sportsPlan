@@ -33,6 +33,7 @@ export default React.createClass({
                   <p>{this.state.playerData.teamName}</p>
                   <p>{this.state.playerData.position}</p>
                   <p>{this.state.playerData.play}</p>
+                  <button className="closeBtn" onClick={this.props.closePlayerInfo}>Close</button>
                 </div>
             </div>
         );

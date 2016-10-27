@@ -67,5 +67,34 @@
 		.ios & {
 			background-color: rgb(30,59,71);
 		}
+		.closeBtn {
+			background: #d93434;
+			background-image: -webkit-linear-gradient(top, #d93434, #b8542c);
+			background-image: -moz-linear-gradient(top, #d93434, #b8542c);
+			background-image: -ms-linear-gradient(top, #d93434, #b8542c);
+			background-image: -o-linear-gradient(top, #d93434, #b8542c);
+			background-image: linear-gradient(to bottom, #d93434, #b8542c);
+			  -webkit-border-radius: 28;
+			  -moz-border-radius: 28;
+			  border-radius: 28px;
+			  text-shadow: 1px 1px 2px #666666;
+			  font-family: Arial;
+			  color: #ffffff;
+			  font-size: 20px;
+			  padding: 10px 20px 10px 20px;
+			  text-decoration: none;
+				top: 78vh;
+		    position: absolute;
+				left: 18vw;
+			}
+		.closeBtn:hover {
+			background: #fa723c;
+		  background-image: -webkit-linear-gradient(top, #fa723c, #d93434);
+		  background-image: -moz-linear-gradient(top, #fa723c, #d93434);
+		  background-image: -ms-linear-gradient(top, #fa723c, #d93434);
+		  background-image: -o-linear-gradient(top, #fa723c, #d93434);
+		  background-image: linear-gradient(to bottom, #fa723c, #d93434);
+		  text-decoration: none;
+		}
 	}
 }

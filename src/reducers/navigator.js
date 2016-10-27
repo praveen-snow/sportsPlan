@@ -39,7 +39,7 @@ export default (function createNavigationReducer(namespace, initState) {
         [NAV_PUSH] : (state, action) => {
             const newState = {...state};
             newState.transitioning = true;
-            newState.history.push(action.current);
+            newState.history.push(action.history);
             newState.current = action.current;
             return newState;
         },

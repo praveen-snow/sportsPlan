@@ -33,7 +33,7 @@ export function getPlayers(goObj){
     store.dispatch({type: 'PLAYER_INFO_DATA', payload: {
         playerData: playerData
     }});
-    let pageHistory = [{backdrop:   true}];
+    let pageHistory = {backdrop:   true};
     store.dispatch({type:'NAV_PUSH_BASE', payload: {
         history:pageHistory,
         current: {

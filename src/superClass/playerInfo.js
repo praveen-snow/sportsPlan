@@ -11,6 +11,10 @@ return (
             });
         }}
         playerInfoData={store.getState().players.playerData}
+        closePlayerInfo={()=>{
+          console.log("close");
+          store.dispatch({type:'NAV_POP_BASE'});
+        }}
     />
 );
 }
