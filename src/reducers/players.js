@@ -10,7 +10,6 @@ export default createReducer(initialState, {
   [PLAYER_INFO_DATA]: (state, action) => {
       const r = {...state};
       r.playerData = action.playerData;
-      console.log(r);
       return r;
   },
 });

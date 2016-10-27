@@ -1,6 +1,16 @@
 import { createReducer, makeId } from 'utils';
-import { APP_LOADED, ALERT_DISMISSED, NEW_QUOTE_STARTED,OPPORTUNITY_SELECTED } from '../constants/events/app';
 
-const initialState = {};
+const GAME_DATA = 'GAME_DATA';
 
-export default createReducer(initialState, {});
+const initialState = {
+  gameData :null
+};
+
+export default createReducer(initialState, {
+  [GAME_DATA]: (state, action) => {
+      const r = {...state};
+      r.gameData = action.gameData;
+      console.log(r);
+      return r;
+  },
+});

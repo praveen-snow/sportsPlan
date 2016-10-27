@@ -5,14 +5,15 @@ import { bindListener } from 'utils';
 import ss from './styles.scss';
 import PureRenderMixin  from 'react-addons-pure-render-mixin';
 import go from 'gojs';
-import {getDiagram,getPlayers} from '../../utils/canvasUtilities';
+import {getData,getDiagram,getPlayers,getSoccerData} from '../../utils/canvasUtilities';
 const goObj = go.GraphObject.make;
 
 export default React.createClass({
     mixins: [PureRenderMixin],
-    apiUnsubscribe: ()=>{},
+    gameDataUnsubscribe: ()=>{},
 
 	getInitialState() {
+
 		return {
       menuOpen:false,
       componentModel:null,
@@ -23,11 +24,20 @@ export default React.createClass({
 	},
     componentWillMount() {
         ss.use();
-        this.apiUnsubscribe = bindListener(this.props.apiListener, state => {});
+        this.gameDataUnsubscribe = bindListener(this.props.gameDataListener, state => {
+            if(state !== null){
+              this.changeData(state);
+            }
+        });
+
+    },
+    changeData(state){
+      this.state.componentDiagram.clear();
+      this.state.componentDiagram.model.nodeDataArray = state;
     },
     componentWillUnmount() {
         ss.unuse();
-        this.apiUnsubscribe();
+        this.gameDataUnsubscribe();
     },
   	componentDidMount() {
       this.renderPlayground();
@@ -37,29 +47,35 @@ export default React.createClass({
         let refElement = this.refs.playGroundDiv;
         let diagram = getDiagram(goObj,refElement);
           diagram.nodeTemplate = getPlayers(goObj);
-
           this.setState({componentModel: model, componentDiagram: diagram},
                             () => {
-                              model.nodeDataArray = this.props.data;
+                              model.nodeDataArray = getData();
                               diagram.model = model;
                               this.setState({componentModel: model, componentDiagram: diagram});
                         }
     );
     },
     changeSports(event){
-      if(event.target.textContent === 'Soccer'){
+      let textContent = event.target.textContent;
+      let data = null;
+      if( textContent === 'Soccer'){
         this.setState({
           groundImage:'../../assets/soccerGround.svg',
           gameTitle:event.target.textContent
         });
-      }else if(event.target.textContent === 'Football'){
+        data = getSoccerData();
+      }else if(textContent === 'Football'){
         this.setState({
           groundImage:'../../assets/amFootball.jpg',
           gameTitle:event.target.textContent
         });
+        data = getData();
       }else{
         this.props.showPopUp();
       }
+
+      this.props.setModelData(textContent,data);
+      console.log(this.state);
     },
     createNavList(){
       let arr=[];

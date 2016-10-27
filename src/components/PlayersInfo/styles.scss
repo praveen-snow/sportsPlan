@@ -5,7 +5,7 @@
 	position: absolute;
 	top: 45px;
 	right: 0;
-	width: 40vw;
+	width: 20vw;
 	overflow: hidden;
 
 	@include respond(medium) {
@@ -54,11 +54,10 @@
 		height: 100%;
 		background-color: rgba(30,59,71,0.96);
 		.imageIcon{
-			height: 18vh;
-			float: left;
-			margin-left: 2px;
-			margin-right: 10px;
-			width: 15vw;
+		height: 25vh;
+		margin-left: 2px;
+		margin-right: 10px;
+		width: 20vw;
 		}
 		p{
 			color: #fff;
@@ -85,7 +84,7 @@
 			  text-decoration: none;
 				top: 78vh;
 		    position: absolute;
-				left: 18vw;
+				left: 9vw;
 			}
 		.closeBtn:hover {
 			background: #fa723c;
