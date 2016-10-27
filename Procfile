@@ -1,1 +1,1 @@
-web: node ./webpack/webpack.config.js
+web: node ./bin/webpack-dev-server.js
