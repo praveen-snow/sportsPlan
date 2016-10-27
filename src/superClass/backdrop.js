@@ -3,6 +3,8 @@ import React from 'react';
 const BackdropVM = function(store) {
     //Components
     const Backdrop = require("components/Backdrop");
+    ///popup is a stateless component
+    const POPUP = require("components/PopUp");
     let data = [
                 {key:"A1",teamName:"Cleveland Browns",play:"Offense",position:"Quarter Back",text:"Cody Kessler",source:"../assets/teamA.png"},
                 {key:"A2",teamName:"Cleveland Browns",play:"Offense",position:"Center",text:"Cameron Erving",source:"../assets/teamA.png"},
@@ -36,6 +38,20 @@ const BackdropVM = function(store) {
                 });
             }}
             data={data}
+            showPopUp={()=>{
+              store.dispatch({type:"NAV_SET_MODAL_BASE", payload: {
+                  modal: (
+                      <POPUP
+                          message={"Only football and soccer functionalities were implemented"}
+                          ok={()=>{
+                            store.dispatch({type:'NAV_SET_MODAL_BASE',payload:{
+                                caller: 'superClass/backdrop', modal: undefined
+                            }})
+                          }}
+                      />
+                  )
+              }})
+            }}
         />
 	);
 

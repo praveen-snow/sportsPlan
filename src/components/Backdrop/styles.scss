@@ -34,7 +34,6 @@
     position: absolute;
     width: 100vw;
     height: 100vh;
-		background-image: url('../../assets/amFootball.jpg');
 		background-size: 100% 100%;
 		background-repeat: no-repeat;
     z-index: -10;
@@ -47,6 +46,13 @@
 				margin-top: 5px;
 				width: '2.4em';
 			}
+			.title {
+		    position: relative;
+		    float: none;
+		    text-align: center;
+		    top: -6vh;
+				z-index: -5;
+		}
 		}
 		.sideNav{
 			width: 15vw;
