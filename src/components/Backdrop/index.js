@@ -60,7 +60,7 @@ export default React.createClass({
       let data = null;
       if( textContent === 'Soccer'){
         this.setState({
-          groundImage:'../../assets/soccerGround.svg',
+          groundImage:'../../assets/soccerGround.jpeg',
           gameTitle:event.target.textContent
         });
         data = getSoccerData();
