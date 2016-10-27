@@ -5,7 +5,7 @@ import { bindListener } from 'utils';
 import ss from './styles.scss';
 import PureRenderMixin  from 'react-addons-pure-render-mixin';
 import go from 'gojs';
-import {getDiagram} from '../../utils/canvasUtilities';
+import {getDiagram,getPlayers} from '../../utils/canvasUtilities';
 const goObj = go.GraphObject.make;
 
 export default React.createClass({
@@ -34,25 +34,9 @@ export default React.createClass({
         let model = goObj(go.TreeModel);
         let refElement = this.refs.playGroundDiv;
         let diagram = getDiagram(goObj,refElement);
-        diagram.nodeTemplate = goObj(
-                                go.Node,"Auto",new go.Binding("text"),
-                                goObj(
-                                  go.Panel,goObj(
-                                    go.Picture,{
-                                      name:"picture",
-                                      desiredSize: new go.Size(50,50),
-                                      margin: new go.Margin(6,8,6,10),
-                                    }, new go.Binding("source")
-                                  ),goObj(go.Panel,"Table",goObj(go.TextBlock,{
-                                    row:5,
-                                    column:0,
-                                    font:"8pt, sans-serif",
-                                    textAlign:"center",
-                                    stroke:"#fff"
-                                  },new go.Binding("text","position")))
-                                )
-        );
-        this.setState({componentModel: model, componentDiagram: diagram},
+          diagram.nodeTemplate = getPlayers(goObj);
+
+          this.setState({componentModel: model, componentDiagram: diagram},
                             () => {
                               model.nodeDataArray = this.props.data;
                               diagram.model = model;

@@ -57,11 +57,9 @@ export default React.createClass({
 				// @endif
 				) return;
             this.setState({
-                elements: Object.assign({
-					backdrop: { z: 1 }
-				}, state.current, state.current.header === false ? {} : {
-					header: { z: 10 }
-				}),
+          elements: Object.assign(
+            {backdrop: { z: 1 }},
+            state.current),
 				// @ifdef DEBUG
                 debug: state.debug,
 				// @endif
@@ -92,15 +90,15 @@ export default React.createClass({
                     return configs;
                 }
 				let elementConfig = this.state.elements[key];
-				
+
 				if(elementConfig === false) {
 					return;
 				}
-				
+
 				if(elementConfig === true) {
 					elementConfig = {};
 				}
-				
+
 				let mergedDefaultConfig = Object.assign({ z: index + 1 }, defaultStyles, elementConfig);
                 configs[key] = Object.assign(mergedDefaultConfig, this.props.sceneConfigurations[key].Styles(mergedDefaultConfig));
             });

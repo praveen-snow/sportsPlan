@@ -15,6 +15,7 @@ const BackdropVM = function(store) {
                 {key:"A9",teamName:"Cleveland Browns",play:"Offense",position:"Left Tackle",text:"Nate Orchard",source:"../assets/teamA.png"},
                 {key:"A10",teamName:"Cleveland Browns",play:"Offense",position:"Right Tackle",text:"Demario Davis",source:"../assets/teamA.png"},
                 {key:"A11",teamName:"Cleveland Browns",play:"Offense",position:"Split End",text:"Andrew Hawkins",source:"../assets/teamA.png"},
+                {key:"ball",position:"",text:"ball",source:"../assets/footBall.png"},
                 {key:"B1",teamName:"Dallas Cowboys",play:"Defense",position:"Strong Safety",text:"Barry Church",source:"../assets/teamB.png"},
                 {key:"B2",teamName:"Dallas Cowboys",play:"Defense",position:"Free Safety",text:"Byron Jones",source:"../assets/teamB.png"},
                 {key:"B3",teamName:"Dallas Cowboys",play:"Defense",position:"Right Corner Back",text:"Brandon Carr",source:"../assets/teamB.png"},
@@ -25,8 +26,7 @@ const BackdropVM = function(store) {
                 {key:"B8",teamName:"Dallas Cowboys",play:"Defense",position:"Left Corner Back",text:"Sean Lee",source:"../assets/teamB.png"},
                 {key:"B9",teamName:"Dallas Cowboys",play:"Defense",position:"Nose Tackle",text:"Benson Mayowa",source:"../assets/teamB.png"},
                 {key:"B10",teamName:"Dallas Cowboys",play:"Defense",position:"Left End",text:"Terrell McClain",source:"../assets/teamB.png"},
-                {key:"B11",teamName:"Dallas Cowboys",play:"Defense",position:"Tackle",text:"Orlando Scandrick",source:"../assets/teamB.png"},
-                {key:"ball",position:"",text:"ball",source:"../assets/footBall.png"}
+                {key:"B11",teamName:"Dallas Cowboys",play:"Defense",position:"Tackle",text:"Orlando Scandrick",source:"../assets/teamB.png"}
               ];
     return (
 		<Backdrop

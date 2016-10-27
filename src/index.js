@@ -15,6 +15,10 @@ if(navigator.userAgent.match(/(iPhone|iPod|iPad)/i)) {
 	document.body.className += ' ios';
 }
 
+export function getLatestStore(){
+	return store;
+}
+
 
 render(
     <Navigator
