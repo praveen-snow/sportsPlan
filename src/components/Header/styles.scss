@@ -12,5 +12,18 @@
   .appNavigator{
     width:100%;
     height:auto;
+    font-size:30px;
+    .wrapper{
+      padding: .5em;
+      .leftWrapper{
+        width:50%;
+        float: left;
+      }
+      .rightWrapper{
+        width:50%;
+        float: right;
+        text-align: right
+      }
+    }
   }
 }
