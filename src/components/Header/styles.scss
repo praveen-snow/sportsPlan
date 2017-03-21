@@ -1,0 +1,16 @@
+@import "../../styles/_common";
+
+.appHeader {
+  position: absolute;
+  width: 100%;
+  height: 80px;
+  top:0;
+  background-color: orangered;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  z-index: -10;
+  .appNavigator{
+    width:100%;
+    height:auto;
+  }
+}

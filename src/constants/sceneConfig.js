@@ -11,14 +11,14 @@ export default {
             return require("superClass/backdrop")(store);
         }
     },
-    playerInfoPage: {
-        Enter: {x: spring(100,[300,20]), z: 5 },
-        Leave: {x: spring(90,[300,20]), z: 5 },
+    header: {
+        Enter: { y:spring(-50),z: 10 },
+        Leave: { y:spring(-50),z: 10 },
         Styles(val) {
-            return { x:spring(val.x), y: val.y, z: 5, opacity: val.opacity};
+            return { x: val.x, y: spring(val.y), z: 10 };
         },
         VM(store) {
-            return require("superClass/playerInfo")(store);
+            return require("superClass/header")(store);
         }
     }
 };

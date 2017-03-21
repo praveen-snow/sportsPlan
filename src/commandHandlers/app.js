@@ -3,7 +3,7 @@ import React from 'react';
 export function bootstrap(store) {
         let state = store.getState();
         let loadAppScene = () => {
-                let state = store.getState();            
+            let state = store.getState();
                 // store.dispatch({type:'NAV_SET_ROUTE_STACK_BASE', payload:{
                 //     history: [],
                 //     current: {
@@ -17,12 +17,11 @@ export function bootstrap(store) {
                 init(); // Unsubscribe
                 loadAppScene();
                 return;
-
         });
-    store.dispatch({type:'NAV_SET_ROUTE_STACK_BASE', payload:{
-        history: [],
-        current: {
-            header: false
-        }
-    }});
+        store.dispatch({type:'NAV_SET_ROUTE_STACK_BASE', payload:{
+            history: [],
+            current: {
+                header: true
+            }
+        }});
 }

@@ -58,8 +58,14 @@ export default React.createClass({
 				) return;
             this.setState({
           elements: Object.assign(
-            {backdrop: { z: 1 }},
-            state.current),
+            {
+                backdrop: true
+            },
+            state.current.header === false ? {} :{
+                header:true
+            },
+            state.current
+          ),
 				// @ifdef DEBUG
                 debug: state.debug,
 				// @endif

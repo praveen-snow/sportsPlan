@@ -1,4 +1,4 @@
-/* src/components/Backdrop */
+/* src/components/Header */
 
 import React from 'react';
 import { bindListener } from 'utils';
@@ -8,23 +8,25 @@ import PureRenderMixin  from 'react-addons-pure-render-mixin';
 export default React.createClass({
     mixins: [PureRenderMixin],
 
-	getInitialState() {
-		return {
-		};
-	},
+    getInitialState() {
+        return {
+        };
+    },
     componentWillMount() {
         ss.use();
     },
     componentWillUnmount() {
         ss.unuse();
     },
-  	componentDidMount() {
+    componentDidMount() {
 
     },
     render() {
         return (
-            <div className="appBackground">
-                <h1>Welcome to Scholl Book Now</h1>
+            <div className="appHeader">
+                <nav className="appNavigator">
+
+                </nav>
             </div>
         );
     },
