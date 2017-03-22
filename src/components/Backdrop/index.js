@@ -24,7 +24,7 @@ export default React.createClass({
     render() {
         return (
             <div className="appBackground">
-                <h1>Welcome to Scholl Book Now</h1>
+                <h1>Welcome to Scholl Book Now </h1>
             </div>
         );
     },

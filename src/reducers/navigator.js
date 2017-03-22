@@ -15,10 +15,12 @@ export default (function createNavigationReducer(namespace, initState) {
     const NAV_SET_OVERLAY = 'NAV_SET_OVERLAY_BASE';
     const NAV_SET_ROUTE_STACK = 'NAV_SET_ROUTE_STACK_BASE';
     const NAV_CLEAR_HISTORY = 'NAV_CLEAR_HISTORY_BASE';
-
+    const SHOW_NOTIFIER = 'SHOW_NOTIFIER';
+    const HIDE_NOTIFIER = 'HIDE_NOTIFIER';
     const initialState = (initState) ? initState : {
         current: {
-			header: false
+			header: false,
+            notifier:false
 		},
         history: [],
 		// @ifdef DEBUG
@@ -35,6 +37,18 @@ export default (function createNavigationReducer(namespace, initState) {
             initialState.history = [];
             initialState.current = {header: false};
             return initialState;
+        },
+        [SHOW_NOTIFIER]:(state,action)=>{
+            const newState = {...state};
+            newState.transitioning = true;
+            newState.current.notifier = !newState.current.notifier;
+            return newState;
+        },
+        [HIDE_NOTIFIER]:(state,action)=>{
+            const newState = {...state};
+            newState.transitioning = true;
+            newState.current.notifier = false;
+            return newState;
         },
         [NAV_PUSH] : (state, action) => {
             const newState = {...state};

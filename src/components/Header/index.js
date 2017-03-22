@@ -21,11 +21,21 @@ export default React.createClass({
     componentDidMount() {
 
     },
+    showUser(){
+      this.props.openUser();
+    },
     render() {
         return (
             <div className="appHeader">
                 <nav className="appNavigator">
-
+                    <div className="wrapper">
+                        <div className="leftWrapper">
+                            <i className="fa fa-ravelry" aria-hidden="true"></i>
+                        </div>
+                        <div className="rightWrapper">
+                            <i className="fa fa-user-circle" onClick={this.showUser}aria-hidden="true"></i>
+                        </div>
+                    </div>
                 </nav>
             </div>
         );

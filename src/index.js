@@ -21,6 +21,11 @@ export function getLatestStore(){
 
 
 render(
+    <div className="parentComponent"
+        // onClick={()=>{
+        //     store.dispatch({type:"HIDE_NOTIFIER"});
+        // }}
+    >
     <Navigator
         store={store}
         startTransition={()=>{
@@ -34,7 +39,8 @@ render(
         }}
         initialState={store.getState().navigator}
         sceneConfigurations={require("constants/sceneConfig")}
-    />,
-    document.getElementById('root'));
-
+        />
+    </div>,
+    document.getElementById('root')
+);
 bootstrap(store);
