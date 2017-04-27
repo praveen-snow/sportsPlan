@@ -7,5 +7,5 @@ export function signUp(store, req) {
     let meta = {};
     meta.req = req;
     meta.endpoint = SET_USER_DETAILS;
-    fetchAPI(store,meta);
+    return fetchAPI(store,meta);
 }

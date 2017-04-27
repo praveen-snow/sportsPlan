@@ -60,10 +60,10 @@ export function fetchAPI(store,meta) {
         json: data,
         body: JSON.stringify(data)
     };
-    promise = timeoutPromise(timeoutMilliSec,fetch(base + meta.endpoint, fetchData).then((response)=>{
+    return promise = timeoutPromise(timeoutMilliSec,fetch(base + meta.endpoint, fetchData).then((response)=>{
         return response.json();
     }).then((json) => {
-        console.log(json);
+        //console.log(json);
         return json;
     }).catch( err => {
         console.log(err);

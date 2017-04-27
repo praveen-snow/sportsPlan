@@ -9,7 +9,16 @@ const SignUpSC = function(store) {
     function signUpUser(userDetails){
         let req = {};
             req = {...userDetails};
-        signUp(store,req);
+        signUp(store,req).then((rsp) => {
+            console.log(rsp);
+            if(rsp.status !== "Failure"){
+                store.dispatch({type:'NAV_PUSH_BASE', payload: {
+                    current: {
+                        userActivity:  true
+                    }
+                }});
+            }
+        });
     }
     return (
 		<SignUp
