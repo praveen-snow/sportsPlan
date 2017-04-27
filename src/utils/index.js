@@ -32,6 +32,55 @@ export function makeId(length) {
     return text;
 }
 
+export function fetchAPI(store,meta) {
+    let state = store.getState();
+    let base = getrootUrl();
+    let data = meta.req;
+    let timeoutPromise = (ms, promise) =>
+    {
+        return new Promise((resolve,reject)=>
+        {
+            promise.then(resolve, reject);
+            setTimeout(()=>{
+                reject(new Error("Timed out"))
+            }, ms);
+
+        })
+    };
+
+    let promise=null;
+    let contentType = 'application/json';
+    let fetchData = {
+        meta: meta,
+        method: 'POST',
+        headers: {
+            'Accept': contentType,
+            'Content-Type': contentType
+        },
+        json: data,
+        body: JSON.stringify(data)
+    };
+    promise = timeoutPromise(timeoutMilliSec,fetch(base + meta.endpoint, fetchData).then((response)=>{
+        return response.json();
+    }).then((json) => {
+        console.log(json);
+        return json;
+    }).catch( err => {
+        console.log(err);
+    })).catch( err => {
+         console.log("Request Time Out");
+    });
+}
+
+export function getAPI() {
+
+}
+
+export function getrootUrl() {
+    let rootUrl = /localDev/;
+    return rootUrl;
+}
+
 const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 const dateString = date => monthNames[date.getMonth()] + " " + date.getDate() + ", " + date.getFullYear();
 
