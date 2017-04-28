@@ -1,32 +1,32 @@
 import React from 'react';
-import { signUp } from '../commandHandlers/api'
+import { signIn } from '../commandHandlers/api'
 import { fetchAPI, getAPI, getrootUrl } from 'utils';
 
 
-const SignUpSC = function(store) {
+const SignInSC = function(store) {
     //Components
-    const SignUp = require("components/SignUp");
-    function signUpUser(userDetails){
+    const SignIn = require("components/SignIn");
+    function userSignIn(userDetails){
         let req = {};
             req = {...userDetails};
-        signUp(store,req).then((rsp) => {
+        signIn(store,req).then((rsp) => {
             console.log(rsp);
             if(rsp.status !== "Failure"){
                 store.dispatch({type:'TRIGGER_LOAD',payload:{
                     load:false
                     }
                 });
-                // store.dispatch({type:'NAV_PUSH_BASE', payload: {
-                //     current: {
-                //         userActivity:  true
-                //     }
-                // }});
+                store.dispatch({type:'NAV_PUSH_BASE', payload: {
+                    current: {
+                        userActivity:  true
+                    }
+                }});
             }
         });
     }
     return (
-		<SignUp
-            signUpUser={signUpUser}
+		<SignIn
+            userSignIn={userSignIn}
             loadListener={ updater => {
                 return store.subscribe(function() {
                     updater(store.getState().app.appLoader);
@@ -37,4 +37,4 @@ const SignUpSC = function(store) {
 
 }
 //
-export default SignUpSC;
+export default SignInSC;

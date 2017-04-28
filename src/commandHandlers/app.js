@@ -7,7 +7,7 @@ export function bootstrap(store) {
             store.dispatch({type:'NAV_SET_ROUTE_STACK_BASE', payload:{
                 history: [],
                 current: {
-                    signUp:   true,
+                    signUp: true
                 }
             }});
         },

@@ -1,11 +1,18 @@
 import React from 'react';
 
 
-const NotifierSC = function(store) {
+const UserDetailsSC = function(store) {
     //Components
-    const Notifier = require("components/Notifier");
+    const UserDetails = require("components/UserDetails");
+    function userSignIn(){
+        store.dispatch({type:'NAV_PUSH_BASE', payload: {
+            current: {
+                usersignin:  true
+            }
+        }});
+    }
     return (
-        <Notifier
+        <UserDetails
             notifieListner={ updater => {
                 return store.subscribe(function() {
                     updater(store.getState().notifier.messageData);
@@ -14,8 +21,9 @@ const NotifierSC = function(store) {
             messageData={()=>{
                 return store.getState().notifier.messageData;
             }}
+            userSignIn={userSignIn}
         />
     );
 }
 //
-export default NotifierSC;
+export default UserDetailsSC;

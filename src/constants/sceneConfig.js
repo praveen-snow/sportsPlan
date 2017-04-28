@@ -21,14 +21,14 @@ export default {
             return require("superClass/header")(store);
         }
     },
-    notifier: {
-        Enter: {x: spring(100,[300,20]), z: 5 },
-        Leave: {x: spring(90,[300,20]), z: 5 },
+    userdetails: {
+        Enter: {y:spring(-50),z: 5 },
+        Leave: {y:spring(-50),z: 5 },
         Styles(val) {
-            return { x:spring(val.x), y: val.y, z: 5, opacity: val.opacity};
+            return { y:spring(val.y), x: val.x, z: 5, opacity: val.opacity};
         },
         VM(store) {
-            return require("superClass/notifier")(store);
+            return require("superClass/userdetails")(store);
         }
     },
     signUp: {
@@ -39,6 +39,16 @@ export default {
         },
         VM(store) {
             return require("superClass/SignUp")(store);
+        }
+    },
+    usersignin: {
+        Enter: {x: spring(100,[300,20]), z: 5 },
+        Leave: {x: spring(90,[300,20]), z: 5 },
+        Styles(val) {
+            return { x:spring(val.x), y: val.y, z: 5, opacity: val.opacity};
+        },
+        VM(store) {
+            return require("superClass/SignIn")(store);
         }
     },
     userActivity: {

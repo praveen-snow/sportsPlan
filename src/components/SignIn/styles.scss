@@ -1,41 +1,28 @@
 @import "../../styles/_common";
 
-.sbw-signup{
+.sbw-signin{
   width: 100%;
   height: calc(100vh - 80px);
   position: absolute;
   top:80px;
-  background-image: url("../../assets/images/signup.jpg");
+  background-image: url("../../assets/images/signIn.jpeg");
   background-size: 100% auto;
   background-repeat: no-repeat;
   .sbw-form {
-    height: 252px;
-    width: 40vw;
-    background-color: #ffffff;
-    border: 1px solid #959595;
+    width: 100%;
     position: absolute;
     top: 20%;
-    left: 10%;
-    box-shadow: 0px 1px 2px 1px #959595;
-    .sbw-heading{
-      font-size: 38px;
-      height: 42px;
-      margin-top: 8px;
-      color: #586062;
-      text-align: center;
-      font-family: "Gotham_SSm_4r",Helvetica,Arial,sans-serif;
-    }
     .sbw-form-wrapper {
       width:100%;
       padding: 10px;
       .sbw-input-wrapper {
         margin-bottom: 10px;
         width: 100%;
-        display: inline-block;
+        display: flex;
         padding: 5px;
         .sbw-input{
           margin-left: 5px;
-          width: 49%;
+          width: 30%;
           font-family: "Gotham_SSm_4r",Helvetica,Arial,sans-serif;
           font-size: 14px;
           font-size: .875rem;
@@ -47,21 +34,21 @@
           border: 1px solid rgba(149, 149, 149, 0.52);
           padding: 12px 10px 10px;
         }
+        .sbw-signin-btn{
+          color:#fff;
+          font-size: 14px;
+          background: #2dbe60;
+          margin-left: 5px;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          line-height: normal;
+          font-family: "Gotham_SSm_4r",Helvetica,Arial,sans-serif;
+          width: 10%;
+          text-align: center;
+          padding-top: 0.9375rem;
+        }
       }
-      .sbw-signup-btn{
-        width: 90%;
-        margin: auto;
-        color:#fff;
-        font-size: 14px;
-        background: #2dbe60;
-        padding: .9375rem 9.9375rem .75rem;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        line-height: normal;
-        display: block;
-        font-family: "Gotham_SSm_4r",Helvetica,Arial,sans-serif;
-        text-align: center;
-      }
+
     }
   }
   .sbw-error {
