@@ -78,18 +78,18 @@ export default React.createClass({
     },
     render() {
         let loadingElement = this.state.appLoader ? (<i className="fa fa-spinner fa-spin" aria-hidden="true"></i>) : false;
-        let sbw_signup_class = this.state.error ? "sbw-form sbw-error" : "sbw-form";
+        let sbw_signup_class = this.state.error ? "animated tada sbw-input sbw-error" : "sbw-input";
         return (
             <div className="sbw-signup">
-                <div className={sbw_signup_class}>
+                <div className="sbw-form">
                     <div className="sbw-form-wrapper">
                         <div className="sbw-input-wrapper">
-                            <input className="sbw-input" type="text" id="email" value={this.state.email} onChange={this.setUserDetails} placeholder="Email"></input>
-                            <input className="sbw-input" type="password" id="passcode" value={this.state.passcode} onChange={this.setUserDetails} placeholder="Passcode"></input>
+                            <input className={sbw_signup_class} type="text" id="email" value={this.state.email} onChange={this.setUserDetails} placeholder="Email"></input>
+                            <input className={sbw_signup_class} type="password" id="passcode" value={this.state.passcode} onChange={this.setUserDetails} placeholder="Passcode"></input>
                         </div>
                         <div className="sbw-input-wrapper">
-                            <input className="sbw-input" type="text" id="firstName" value={this.state.firstName} onChange={this.setUserDetails} placeholder="First Name"></input>
-                            <input className="sbw-input" type="text" id="lastName" value={this.state.lastName} onChange={this.setUserDetails} placeholder="Last Name"></input>
+                            <input className={sbw_signup_class} type="text" id="firstName" value={this.state.firstName} onChange={this.setUserDetails} placeholder="First Name"></input>
+                            <input className={sbw_signup_class} type="text" id="lastName" value={this.state.lastName} onChange={this.setUserDetails} placeholder="Last Name"></input>
                         </div>
                         <div className="sbw-signup-btn" onClick={this.userSignUp}>sign up for free &nbsp;&nbsp;{loadingElement}</div>
                     </div>
