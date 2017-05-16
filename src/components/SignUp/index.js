@@ -82,7 +82,6 @@ export default React.createClass({
         return (
             <div className="sbw-signup">
                 <div className={sbw_signup_class}>
-                    <div className="sbw-heading">Stop carrying books....!</div>
                     <div className="sbw-form-wrapper">
                         <div className="sbw-input-wrapper">
                             <input className="sbw-input" type="text" id="email" value={this.state.email} onChange={this.setUserDetails} placeholder="Email"></input>
@@ -100,3 +99,5 @@ export default React.createClass({
     },
 
 });
+
+{/*<div className="sbw-heading">Stop carrying books....!</div>*/}

@@ -18,7 +18,8 @@ const SignInSC = function(store) {
                 });
                 store.dispatch({type:'NAV_PUSH_BASE', payload: {
                     current: {
-                        userActivity:  true
+                        userActivity:  true,
+                        SideNavBar:    true
                     }
                 }});
             }

@@ -85,7 +85,7 @@ config.set('utils_aliases', [
   'store',
   'styles',
   'utils',
-  'superClass'
+  'mc'
 ].reduce((acc, x) => ((acc[x] = paths.src(x)) && acc), {}));
 
 export default config;
