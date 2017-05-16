@@ -31,13 +31,13 @@ export default React.createClass({
             <div className="sbw-user-details">
                 <div className="userWrapper">
                     <div onClick={this.props.userSignIn} className="user-details">
-                        <i className="fa fa-unlock" aria-hidden="true"></i> Sign In
+                        Sign In
                     </div>
                     <div className="user-details">
-                        <i className="fa fa-archive" aria-hidden="true"></i> About
+                        About
                     </div>
                     <div className="user-details">
-                        <i className="fa fa-info" aria-hidden="true"></i> Help
+                        Help
                     </div>
                 </div>
             </div>

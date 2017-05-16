@@ -4,7 +4,7 @@ import React from 'react';
 import { bindListener } from 'utils';
 import ss from './styles.scss';
 import PureRenderMixin  from 'react-addons-pure-render-mixin';
-
+//import FlyMenu from 'components/FlyMenu';
 export default React.createClass({
     mixins: [PureRenderMixin],
     loadUnSubscribe: ()=>{},
@@ -101,3 +101,4 @@ export default React.createClass({
 });
 
 {/*<div className="sbw-heading">Stop carrying books....!</div>*/}
+{/*<FlyMenu/>*/}

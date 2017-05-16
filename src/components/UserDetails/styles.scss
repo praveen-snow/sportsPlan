@@ -2,13 +2,14 @@
 
 .sbw-user-details {
   position: absolute;
-  width: 12vw;
-  height: 17vh;
+  width: 20vw;
+  height: calc(100vh - 80px);
   top:80px;
   right:0;
-  background-color: #ffffff;
+  background-color: #091823;
   background-size: 100% 100%;
   background-repeat: no-repeat;
+  color: #ffffff;
   .userWrapper{
     width: 100%;
     font-size: 20px;
@@ -17,12 +18,11 @@
       align-content: center;
       text-align: center;
       padding: 11px;
-      border-bottom: 1px solid #959595;
     }
     .user-details:hover{
-      background-color: #091823;
+      background-color: #ffffff;
       cursor: pointer;
-      color: #ffffff;
+      color: #091823;
     }
   }
 }

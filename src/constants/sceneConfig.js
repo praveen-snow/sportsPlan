@@ -22,10 +22,10 @@ export default {
         }
     },
     userdetails: {
-        Enter: {y:spring(-50),z: 5 },
-        Leave: {y:spring(-40),z: 5 },
+        Enter: {x: spring(100,[300,20]), z: 5 },
+        Leave: {x: spring(90,[300,20]), z: 5 },
         Styles(val) {
-            return { y:spring(val.y), x: val.x, z: 5, opacity: val.opacity};
+            return { x:spring(val.x), y: val.y, z: 5, opacity: val.opacity};
         },
         VM(store) {
             return require("mc/userdetails")(store);
