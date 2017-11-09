@@ -1,6 +1,8 @@
 import webpack				from 'webpack';
 import config				from '../config';
 import HtmlWebpackPlugin	from 'html-webpack-plugin';
+import BrowserSyncPlugin from 'browser-sync-webpack-plugin';
+var browserSync = require('browser-sync');
 
 const paths = config.get('utils_paths');
 var fs = require('fs');
@@ -37,7 +39,7 @@ const webpackConfig = {
   },
   output : {
     filename		: '[name].js',
-	chunkFilename	: '[id].[name].[chunkhash].js',
+		chunkFilename	: '[id].[name].[chunkhash].js',
     path			: paths.project(config.get('dir_dist'))
   },
   plugins : [
@@ -47,13 +49,19 @@ const webpackConfig = {
       hash     : true,
       filename : 'index.html',
       inject   : 'body',
-	  minify   : {},
+	  	minify   : {},
     }),
 	new webpack.optimize.CommonsChunkPlugin({
 		name: "vendor",
 		chunks: ["vendor", "app"],
 	}),
-	new webpack.optimize.OccurrenceOrderPlugin()
+	new webpack.optimize.OccurrenceOrderPlugin(),
+	new BrowserSyncPlugin({
+      host: 'localhost',
+      port: 3030,
+      browsers: [],
+      server: { baseDir: [ paths.project(config.get('dir_dist')) ] }
+    })
   ],
   resolve : {
     extensions : ["", ".web.js", ".js", ".jsx"],
