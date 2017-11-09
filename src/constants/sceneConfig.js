@@ -38,7 +38,7 @@ export default {
             return { x:spring(val.x), y: val.y, z: 5, opacity: val.opacity};
         },
         VM(store) {
-            return require("mc/SignUp")(store);
+            return require("mc/signup")(store);
         }
     },
     usersignin: {
@@ -48,7 +48,7 @@ export default {
             return { x:spring(val.x), y: val.y, z: 5, opacity: val.opacity};
         },
         VM(store) {
-            return require("mc/SignIn")(store);
+            return require("mc/signin")(store);
         }
     },
     userActivity: {
