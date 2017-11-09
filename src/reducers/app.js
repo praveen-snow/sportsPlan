@@ -1,16 +1,22 @@
 import { createReducer, makeId } from 'utils';
 
-const GAME_DATA = 'GAME_DATA';
+const TRIGGER_LOAD = 'TRIGGER_LOAD';
+const FAILURE_RESPONSE = 'FAILURE_RESPONSE';
 
 const initialState = {
-  gameData :null
+    appLoader: false,
+    rsp:{}
 };
 
 export default createReducer(initialState, {
-  [GAME_DATA]: (state, action) => {
+  [TRIGGER_LOAD]: (state, action) => {
       const r = {...state};
-      r.gameData = action.gameData;
-      console.log(r);
+      r.appLoader = action.load;
       return r;
   },
+  [FAILURE_RESPONSE]: (state, action) => {
+      const r = {...state};
+      r.rsp = action.rsp;
+      return r;
+  }
 });

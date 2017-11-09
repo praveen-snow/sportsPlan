@@ -31,8 +31,11 @@ export default React.createClass({
                     <div className="wrapper">
                         <div className="leftWrapper">
                             <i className="fa fa-ravelry" aria-hidden="true"></i>
+                            Schoolbook
                         </div>
                         <div className="rightWrapper">
+                            <i className="fa fa-bell" aria-hidden="true"></i>
+                            &nbsp;&nbsp;
                             <i className="fa fa-user-circle" onClick={this.showUser}aria-hidden="true"></i>
                         </div>
                     </div>

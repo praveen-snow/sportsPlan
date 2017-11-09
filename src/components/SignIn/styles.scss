@@ -1,0 +1,59 @@
+@import "../../styles/_common";
+
+.sbw-signin{
+  width: 100%;
+  height: calc(100vh - 80px);
+  position: absolute;
+  top:80px;
+  background-image: url("../../assets/images/signIn.jpeg");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  .sbw-form {
+    width: 100%;
+    position: absolute;
+    top: 20%;
+    .sbw-form-wrapper {
+      width:100%;
+      padding: 10px;
+      .sbw-input-wrapper {
+        margin-bottom: 10px;
+        width: 100%;
+        display: flex;
+        padding: 5px;
+        .sbw-input{
+          margin-left: 5px;
+          width: 30%;
+          font-family: "Gotham_SSm_4r",Helvetica,Arial,sans-serif;
+          font-size: 14px;
+          font-size: .875rem;
+          line-height: 21px;
+          line-height: 1.3125rem;
+          color: #586062;
+          border-radius: 3px;
+          outline: none;
+          border: 1px solid rgba(149, 149, 149, 0.52);
+          padding: 12px 10px 10px;
+        }
+        .sbw-signin-btn{
+          color:#fff;
+          font-size: 14px;
+          background: #2dbe60;
+          margin-left: 5px;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          line-height: normal;
+          font-family: "Gotham_SSm_4r",Helvetica,Arial,sans-serif;
+          width: 10%;
+          text-align: center;
+          padding-top: 0.9375rem;
+        }
+      }
+
+    }
+  }
+  .sbw-error {
+    border: 2px solid #F64747;
+    box-shadow: 0 0 10px 0 #F64747;
+    /*background-color: hsl(0, 54%, 72%);*/
+  }
+}

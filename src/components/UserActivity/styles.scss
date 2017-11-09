@@ -1,0 +1,11 @@
+@import "../../styles/_common";
+
+.sbw-user-activity{
+  position: absolute;
+  top:80px;
+  width: 83%;
+  right:0;
+  height: calc(100vh - 80px);
+  background-color: #ffffff;
+  border-left: 1px solid #959595;
+}

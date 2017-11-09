@@ -13,7 +13,16 @@ const server = new WebpackDevServer(webpack(webpackConfig), {
 	lazy   : false,
 	stats  : {
 		colors : true
-	}
+	},
+    proxy: {
+        '/localDev/*': {
+            target: 'http://localhost:5000/',
+            changeOrigin: true,
+            pathRewrite: {
+                '^/localDev': ''
+            }
+        }
+    }
 });
 
 export default server;

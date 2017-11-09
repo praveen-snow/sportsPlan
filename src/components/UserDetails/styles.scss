@@ -1,0 +1,28 @@
+@import "../../styles/_common";
+
+.sbw-user-details {
+  position: absolute;
+  width: 20vw;
+  height: calc(100vh - 80px);
+  top:80px;
+  right:0;
+  background-color: #091823;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  color: #ffffff;
+  .userWrapper{
+    width: 100%;
+    font-size: 20px;
+    .user-details{
+      height: 50px;
+      align-content: center;
+      text-align: center;
+      padding: 11px;
+    }
+    .user-details:hover{
+      background-color: #ffffff;
+      cursor: pointer;
+      color: #091823;
+    }
+  }
+}

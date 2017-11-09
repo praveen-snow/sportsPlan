@@ -20,7 +20,7 @@ export default (function createNavigationReducer(namespace, initState) {
     const initialState = (initState) ? initState : {
         current: {
 			header: false,
-            notifier:false
+            userdetails:false
 		},
         history: [],
 		// @ifdef DEBUG
@@ -41,13 +41,13 @@ export default (function createNavigationReducer(namespace, initState) {
         [SHOW_NOTIFIER]:(state,action)=>{
             const newState = {...state};
             newState.transitioning = true;
-            newState.current.notifier = !newState.current.notifier;
+            newState.current.userdetails = !newState.current.userdetails;
             return newState;
         },
         [HIDE_NOTIFIER]:(state,action)=>{
             const newState = {...state};
             newState.transitioning = true;
-            newState.current.notifier = false;
+            newState.current.userdetails = false;
             return newState;
         },
         [NAV_PUSH] : (state, action) => {

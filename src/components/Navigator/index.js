@@ -155,7 +155,9 @@ export default React.createClass({
                 {(this.state.overlay) ? this.state.overlay : []}
                 {(this.state.alert) ? this.state.alert : []}
 				// @ifdef DEBUG
-                {(this.state.debug) ? (<div style={{position:"absolute",top:"0",right:"0",zIndex:"10",width:"40vw",height:"100vh"}}><Provider store={this.props.store} key="provider"><LogMonitor /></Provider></div>) : []}
+                {(this.state.debug) ? (<div style={{position:"absolute",top:"0",right:"0",zIndex:"10",width:"40vw",height:"100vh"}}>
+                    <Provider store={this.props.store} key="provider"><LogMonitor /></Provider>
+                </div>) : []}
 				// @endif
             </div>
         );

@@ -1,0 +1,68 @@
+@import "../../styles/_common";
+
+.sbw-signup{
+  width: 100%;
+  height: calc(100vh - 80px);
+  position: absolute;
+  top:80px;
+  background-image: url("../../assets/images/signup.jpg");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  .sbw-form {
+    height: auto;
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    .sbw-heading{
+      font-size: 38px;
+      height: 42px;
+      margin-top: 8px;
+      color: #586062;
+      text-align: center;
+      font-family: "Gotham_SSm_4r",Helvetica,Arial,sans-serif;
+    }
+    .sbw-form-wrapper {
+      width:100%;
+      padding: 10px;
+      .sbw-input-wrapper {
+        margin-bottom: 10px;
+        width: 100%;
+        display: inline-block;
+        padding: 5px;
+        .sbw-input{
+          margin-left: 5px;
+          width: 49%;
+          font-family: "Gotham_SSm_4r",Helvetica,Arial,sans-serif;
+          font-size: 14px;
+          font-size: .875rem;
+          line-height: 21px;
+          line-height: 1.3125rem;
+          color: #586062;
+          border-radius: 3px;
+          outline: none;
+          border: 1px solid rgba(149, 149, 149, 0.52);
+          padding: 12px 10px 10px;
+        }
+      }
+      .sbw-signup-btn{
+        width: 90%;
+        margin: auto;
+        color:#fff;
+        font-size: 14px;
+        background: #2dbe60;
+        padding: .9375rem 9.9375rem .75rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        line-height: normal;
+        display: block;
+        font-family: "Gotham_SSm_4r",Helvetica,Arial,sans-serif;
+        text-align: center;
+      }
+    }
+  }
+  .sbw-error {
+    border: 2px solid #F64747;
+    box-shadow: 0 0 10px 0 #F64747;
+    /*background-color: hsl(0, 54%, 72%);*/
+  }
+}
